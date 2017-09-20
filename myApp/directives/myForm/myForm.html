@@ -1,0 +1,15 @@
+<div class="form-group" ng-repeat='form in myForm.formSetting track by $index'>
+
+    <label class='control-label'>{{form.labelName}}</label>
+    <div>
+        <input type='{{form.type}}' name='{{form.fieldName}}' class='form-control' ng-model='myForm.model[form.fieldName]'
+        />
+    </div>
+</div>
+
+
+<!--pass parameter in function-->
+<button type = 'sumbit' class = 'btn btn-primary form-control' ng-click = 'myForm.save({model : myForm.model})'>Save</button>
+
+<!--without pass paramete in function-->
+<!--<button type = 'sumbit' class = 'btn btn-primary form-control' ng-click = 'myForm.save()'>Save</button>-->
